@@ -788,3 +788,22 @@ footer h3 {
     .masonry-grid { column-count: 2; }
     .glass-nav { padding: 10px 20px; gap: 15px; }
 }
+
+/* Styling Nama Tamu di Welcome Screen */
+.guest-info {
+    margin: 20px 0 30px;
+}
+
+.guest-info p {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+#guest-name-display {
+    font-family: var(--font-title);
+    color: var(--accent-gold);
+    font-size: 2rem;
+    font-weight: 600;
+}

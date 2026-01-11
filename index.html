@@ -16,10 +16,16 @@
 <body>
     <div id="welcome-screen">
         <div class="welcome-content" data-aos="zoom-in">
-            <p>Undangan Pernikahan</p>
-            <h1>Fulan & Fulanah</h1>
-            <button id="btn-open">Buka Undangan</button>
-        </div>
+    <p>Undangan Pernikahan</p>
+    <h1>Fulan & Fulanah</h1>
+    
+    <div class="guest-info">
+        <p>Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+        <h2 id="guest-name-display">Tamu Undangan</h2>
+    </div>
+
+    <button id="btn-open">Buka Undangan</button>
+</div>
     </div>
 
     <div class="music-control">
@@ -40,6 +46,8 @@
 
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
+
+
 
     <section id="home" class="hero-parallax">
         <div class="hero-overlay"></div>
@@ -73,7 +81,7 @@
 
     <section id="mempelai" class="mempelai-section">
         <div class="bg-ornament"></div>
-        <h2 class="section-title" data-aos="fade-up">Groom & Bride</h2>
+        <h2 class="section-title" data-aos="fade-up">Biodata Pasangan</h2>
         <div class="couple-container">
             <div class="couple-card groom" data-aos="fade-right">
                 <div class="img-frame">
@@ -83,8 +91,9 @@
                     <h3>Fulan</h3>
                     <p class="son-of">Putra Pertama Bpk. Fulan & Ibu Fulanah</p>
                     <div class="socials">
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/ashimatu.elqudsy?igsh=YWJybzMxdDRrc214" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/6285161808524" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <br><br><i>klik ikon media sosial untuk tahu akunnya</i>
                     </div>
                 </div>
             </div>
@@ -98,8 +107,9 @@
                     <h3>Fulanah</h3>
                     <p class="son-of">Putri Kedua Bpk. Fulan & Ibu Fulanah</p>
                     <div class="socials">
-                        <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/ashimatu.elqudsy?igsh=YWJybzMxdDRrc214" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/6285161808524" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <br><br><i>klik ikon media sosial untuk tahu akunnya</i>
                     </div>
                 </div>
                 <div class="img-frame">
@@ -119,7 +129,7 @@
                     <p class="date-event">Minggu, 08 Desember 2026</p>
                     <p class="time-event"><i class="fa-regular fa-clock"></i> 08:00 - 10:00 WIB</p>
                     <p class="loc-event">Masjid Agung Al-Ittihad, Jakarta Selatan</p>
-                    <a href="#" target="_blank" class="btn-map">Lihat Lokasi</a>
+                    <a href="https://maps.app.goo.gl/6xT1Ze4Yc5dsaFsN6?g_st=aw" target="_blank" class="btn-map">Lihat Lokasi</a>
                 </div>
             </div>
             <div class="timeline-item right" data-aos="fade-up">
@@ -129,7 +139,7 @@
                     <p class="date-event">Minggu, 08 Desember 2026</p>
                     <p class="time-event"><i class="fa-regular fa-clock"></i> 11:00 - 14:00 WIB</p>
                     <p class="loc-event">Grand Ballroom Luxury Ritz, Jakarta Pusat</p>
-                    <a href="#" target="_blank" class="btn-map">Lihat Lokasi</a>
+                    <a href="https://maps.app.goo.gl/PKonUGDYJZX383qG8" target="_blank" class="btn-map">Lihat Lokasi</a>
                 </div>
             </div>
         </div>
@@ -227,6 +237,24 @@
             <div class="ios-notif-arrow"></div>
         </div>
     </div>
+
+    
+
+
+<script>
+    // 1. Ambil data dari URL (query string)
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('to'); // Mengambil isi dari variabel 'to'
+
+    // 2. Cek apakah ada nama di URL
+    if (nama) {
+        // Ganti teks "Nama Tamu" dengan nama dari URL
+        document.getElementById("nama-tamu").innerText = nama;
+    } else {
+        // Jika tidak ada nama di URL (link biasa), tampilkan teks default
+        document.getElementById("nama-tamu").innerText = "Tamu Undangan";
+    }
+</script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>

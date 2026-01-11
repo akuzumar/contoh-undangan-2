@@ -1,6 +1,44 @@
 /**
  * KONFIGURASI AWAL
  */
+
+
+/**
+ * FUNGSI AMBIL NAMA TAMU DARI URL
+ */
+function getGuestName() {
+    // Ambil parameter dari URL (misal: ?to=Nama+Tamu)
+    const urlParams = new URLSearchParams(window.location.search);
+    let guestName = urlParams.get('to');
+
+    // Target elemen di HTML
+    const nameDisplay = document.getElementById('guest-name-display');
+    const rsvpNameInput = document.querySelector('input[name="Nama"]');
+
+    if (guestName) {
+        // Ganti tanda plus (+) dengan spasi
+        guestName = guestName.replace(/\+/g, ' ');
+        
+        // Tampilkan di Welcome Screen
+        nameDisplay.innerText = guestName;
+
+        // Otomatis isi kolom Nama di form RSVP agar tamu tidak repot mengetik
+        if (rsvpNameInput) {
+            rsvpNameInput.value = guestName;
+            // Tambahkan class agar label tidak menumpuk (jika menggunakan animasi label)
+            rsvpNameInput.classList.add('valid');
+        }
+    }
+}
+
+// Jalankan fungsi saat halaman dimuat
+window.addEventListener('DOMContentLoaded', getGuestName);
+
+
+
+
+
+
 AOS.init({
     duration: 1000,
     easing: 'ease-out-quart',
